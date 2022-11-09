@@ -1,0 +1,7 @@
+.article h1{
+    font-size: nth($size, 3);
+}
+
+article div p{
+    font-size: nth($size, 1);
+}

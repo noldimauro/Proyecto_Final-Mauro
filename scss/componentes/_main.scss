@@ -1,0 +1,5 @@
+main section div ul li{
+    background-color: map-get($btn , bg-btn);
+    border: map-get($btn, bordes-btn);
+    color: map-get($btn, btn-color);
+};

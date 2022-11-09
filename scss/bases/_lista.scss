@@ -1,0 +1,27 @@
+//fonts
+$sans-serif: 
+Inter,
+Roboto,
+Raleway,
+Noto Sans
+;
+$serif: 
+Cormorant Infant;
+$handwriting: 
+Dancing Script;
+
+//sizes
+$size: 
+20px,
+30px,
+40px,
+50px,
+;
+
+//tamaño fuente para h1
+h1{
+    font-family: nth($serif, 1);
+}
+
+
+
