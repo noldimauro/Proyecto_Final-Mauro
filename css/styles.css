@@ -59,26 +59,27 @@ nav ul li{
   display: inline-block;
 }
 nav ul li a{
-  text-decoration: none;
+  text-decoration:none;
   margin: 10px;
   color: black;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .caja_barraNav { /* barra de navegacion */
   padding: 10px;
   position: absolute;
   top: 65px;
-  left: 50%;
+  left: 60%;
   font-family: Roboto;
   text-align: center;
 }
-.nav a:hover {
-  color: #9867C5;
-  border-bottom: 3px solid #9867C5;
+a:hover {
+  text-decoration: underline;
 }
 /*----------------- index (html)------------------*/
 main{
-  background-color: darkgray;
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #466066, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #466066, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .contenedor_central{ /* contenedor central */
   width: 100vw;
@@ -146,6 +147,9 @@ main section div ul li a{
   color: black;
   font-size: 1.3rem;
 }
+body{
+  overflow-x: hidden;
+}
 /* generacion de la animacion del fondo */
 @keyframes animacion{
   0%{background-position: 0 50%;}
@@ -160,7 +164,7 @@ main section div ul li a{
   grid-template-columns: 70% 30%;
   grid-template-rows: 0.55fr 0.75fr 0.25fr 0.75fr 0.25fr 0.75fr;
   grid-template-areas: 
-  "titulo img"
+  "titulo titulo"
   "parrafo_0 img"
   "sub_1 img"
   "parrafo_1 img"
@@ -184,7 +188,6 @@ article h1{ /* titulo de la pagina QS*/
   padding-right: 20px;
   text-align: justify;
 }   
-
 article div p{
   font-family: Roboto;
   font-style: normal;
@@ -230,25 +233,29 @@ article div p{
   padding-left: 90px;
   padding-top: 10px;
   align-items: center;
-}
-          
+}         
 section{
   width: 100%;
-  height: 100vh;
   color: #fff;
-  background: linear-gradient(45deg,rgb(21, 41, 85),rgb(28, 28, 46),rgb(25, 34, 25),black);
-  /*background: linear-gradient(45deg,red,blue,green,black);*/
+  background: linear-gradient(45deg,rgb(23, 45, 92),rgb(28, 28, 46),rgb(41, 56, 41),black);
   background-size: 400% 400%;
   position: relative;
   animation: animacion 10s ease infinite; /* animacion del fondo */
 }
 
 /*------------ galería (html)---------------------------*/
-.col-sm-12{
-  background-color: dimgray;
+.col-sm-12 .col-md-6 .col-lg-4{
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+span{
+  font-family: Inter;
+  color: black;
+  font-size: 18px;
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);*/
 }
 .container-fluid{ /*contenedor padre*/
-  background-color: dimgray;
   margin-top: 180px;
   align-items: center;   
   height: 660px;
@@ -263,11 +270,9 @@ img{
 }
 
 /*------------ compras (html)--------------*/
-section .back_gradient{
-  height: 10px;
-}
 .flex-container{
-  margin-top: 170px;
+  margin-top: 180px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -308,7 +313,7 @@ section .back_gradient{
   font-size: 17px;
   color: rgb(169, 207, 107);
   margin-left: 80px;
-  text-align: left;
+  text-align: justify;
 }
 .mensajeFinal{
   font-family: Roboto;
@@ -316,7 +321,15 @@ section .back_gradient{
   font-size: 17px;
   color: rgb(169, 207, 107);
   margin-left: 80px;
-  text-align: left;
+  text-align: justify;
+}
+.back_gradient{
+  height: 155vh;
+}
+#carouselExampleIndicators{
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 100px;
 }
 
 /*------------ boton whatsapp -------------*/
@@ -334,27 +347,24 @@ section .back_gradient{
   box-shadow: 2px 2px 3px #999;
   z-index:100;
 }
-
 .float:hover {
 text-decoration: none;
 color: #25d366;
 background-color:#fff;
 }
-
 .my-float{
 margin-top:16px;
 }
 
 /*------------ contacto (html)-------------*/
 .form{
-  /*background-color: #18A383;*/
   text-align: center;
   margin-top: 180px;
 }
 .form span h3{
   font-family: Roboto;
-  font-style: italic;
-  font-size: 20px;
+  font-style:normal;
+  font-size: 18px;
 }
 input, textarea{
   outline: none;
@@ -368,11 +378,11 @@ input, textarea{
 form{ /*interior del form*/
   background-color: rgb(101, 104, 99);
   color: black;
-  font-size: 0.8em;
-  padding: 20px;
+  font-size: 1em;
+  padding: 15px;
   margin: 0 auto;
   width: 450px;
-  border-radius: 5px;
+  border-radius: 10px;
 }  
 input{
   background-color:khaki; 
@@ -412,7 +422,6 @@ textarea{
   display: inline-block;
   padding: 20px 15px;
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 .btn-green{
@@ -422,12 +431,14 @@ textarea{
 
 /*-------------- pie de pagina (todas) ---------------*/ 
 footer {
-  background-color: rgb(83, 83, 83);
-  margin-left: 0px;
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #466066, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #466066, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 25px;
 }
 h2{
   text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.7);
 }
 .row{
   padding: 5px;
@@ -436,19 +447,19 @@ h2{
 span{
   font-family: Inter;
   color: black;
-  font-size: 14px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-
+  font-size: 15px;
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);*/
 }
 iframe{
   border-radius: 20px;
 }
 .col-lg-4 h2 p{
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.7);
   color: rgb(4, 6, 78);
-  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);*/
 }
 
-/*----- display movile ------*/
+/*-------- display movile ---------*/
 @media (max-width: 768px) {
   /* --- header ---*/
   .logo_tienda { /* Logo de la tienda */
@@ -459,18 +470,20 @@ iframe{
     top: 10px;
     left: 0;
   }
+  .logo_tienda img{
+    width: 160;
+  }
   nav ul li a{
       color: black;
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
   nav ul li{
       display: block;
   }
   .caja_barraNav {
       top: 30px;
-      right: 10px;
   }
-  /* ------ index.html -------- */
+  /* --------- index.html ----------- */
   h1{ /* Titulo */
       color: aqua;
       font-size: 35px;
@@ -505,7 +518,7 @@ iframe{
   }
 /*------- quienes_somos (html)--------*/
   section{
-    height: auto;
+    height: 250px;
   }
   
   #container_qs{ /* contenedor padre QS */
@@ -522,18 +535,22 @@ iframe{
     "parrafo_2"
   }
   .imagen_derecha{
-    padding-left: 0;
+    padding: 50px;
+    padding-left: 30px;
     padding-top: 10px;
     align-items: center;
   }  
-  /* ----- galeria ------*/
+  /* ----------- galeria -----------*/
   .container-fluid{ /*contenedor padre*/
     background-color: dimgray;
     margin-top: 180px;
     align-items: center;   
     height: auto;
   }
-  /* ---- compras ---- */
+  /* ----------- compras ----------- */
+  section{
+    height: auto;
+  }
   .titulo_compras h1{
     font-size: 35px;
   }  
@@ -543,14 +560,63 @@ iframe{
     text-align: center;
     font-size: 10px;
   }
+  .mensajeCentral p{
+    font-size: 15px;
+  }
+  .mensajeFinal{
+    font-size: 15px;
+  }
+  #carouselExampleIndicators{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+  /* ---- formulario de contacto ---- */
+  .contacto{
+    height: auto;
+  }
+  form{ /*interior del form*/
+    font-size: 0.6em;
+    padding: 20px;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 10px;
+  }
+  .form span h3{
+    font-size: 15px;
+  }  
+  input{ 
+    width: 300px; 
+    height: 40px; 
+  }
+  textarea{
+    background-color: khaki; 
+    width: 300px; 
+    height: 80px; 
+    resize: none;
+  }
   
-  /* ----- footer ----- */
+  /*------------ boton whatsapp -------------*/
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:40px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+  
+  /* --------------- footer --------------- */
   .container text-center{
       display: none;
   }
-  /*footer{
-    visibility:hidden;
-  }*/
+  
 }
   
 /*# sourceMappingURL=styles.css.map */
