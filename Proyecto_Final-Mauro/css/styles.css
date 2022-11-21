@@ -1,0 +1,622 @@
+*{ /* reseteo inicial*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografias importadas:   
+font-family: 'Cormorant Infant', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; 
+font-family: 'Dancing Script';
+font-family: 'Raleway';
+font-family: 'DM Serif Display', serif;
+*/
+/* Importación de fuentes de google fonts */ 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+h1 {
+  font-family: Cormorant;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: aqua;
+  font-size: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+.article h1 {
+  font-size: 40px;
+}
+
+article div p {
+  font-size: 20px;
+}
+/* header */
+.contenedor_header { /* Caja contenedora de la cabecera*/
+  background-color: rgb(248, 248, 60);
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  /*max-width:100%;*/
+  height: 180px;
+  z-index: 10;
+}
+.logo_tienda { /* Logo de la tienda */
+  width: 300px;
+  height: 160px;
+  padding: 15px;
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
+ul{
+  list-style: none;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  text-decoration:none;
+  margin: 10px;
+  color: black;
+  font-size: 1rem;
+}
+.caja_barraNav { /* barra de navegacion */
+  padding: 10px;
+  position: absolute;
+  top: 65px;
+  left: 60%;
+  font-family: Roboto;
+  text-align: center;
+}
+a:hover {
+  text-decoration: underline;
+}
+/*----------------- index (html)------------------*/
+main{
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #466066, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #466066, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contenedor_central{ /* contenedor central */
+  width: 100vw;
+  height: 670px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: url(../imagenes/panoramicas/tienda.png);
+  background-repeat: no-repeat;
+}
+.fondo{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.texto-encima{ /* titulo de la seccion */
+  width: 100%;
+  text-align: center;
+}
+.slogan{
+  text-align: center;
+}
+section div h3 { /* slogan */
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  font-size: 1.7rem;
+}
+.slogan .nombre h3{
+  font-family: 'DM Serif Display', serif;
+  color: aqua;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.slogan span h3{
+  font-size: 1.2rem;
+  font-family: Inter;
+}
+.que_tenemos{
+  width: 70%;
+  margin: 0 auto;
+}
+.que_tenemos h5{
+  color: #fff;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+.boton_conocenos{ /* posicionamiento del botón */
+  top: 60%;
+  margin: 0 auto;
+}
+/* diseño boton */
+main section div ul li {
+  background-color: lime;
+  border: 1px solid black;
+  color: black;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+}
+main section div ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+body{
+  overflow-x: hidden;
+}
+/* generacion de la animacion del fondo */
+@keyframes animacion{
+  0%{background-position: 0 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0 50%;}
+}
+
+/*------------ quienes_somos (html)---------------------------*/
+#container_qs{ /* contenedor padre QS */
+  margin-top: 180px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 0.55fr 0.75fr 0.25fr 0.75fr 0.25fr 0.75fr;
+  grid-template-areas: 
+  "titulo titulo"
+  "parrafo_0 img"
+  "sub_1 img"
+  "parrafo_1 img"
+  "sub_2 img"
+  "parrafo_2 img"
+  ;
+}  
+.titulo_QS{
+  grid-area: titulo;
+}
+article h1{ /* titulo de la pagina QS*/
+  font-size: 40px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+}
+.parrafo0_QS{ /* texto del parrafo 0*/
+  color: rgb(169, 207, 107);
+  grid-area: parrafo_0;
+  padding-left: 30px;
+  padding-top: 5px; 
+  padding-right: 20px;
+  text-align: justify;
+}   
+article div p{
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 17px;
+}
+.subtitulo_1{ /* subtitulo del parrafo 1*/
+  grid-area: sub_1;
+  padding: 20px;
+  padding-top: 20px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+  text-align: left;
+  font-size: 20px;
+  color: silver;
+}
+.parrafo1_QS{ /* texto del parrafo 1*/
+  color: rgb(169, 207, 107);
+  grid-area: parrafo_1;
+  padding-left: 30px;
+  padding-top: 5px; 
+  padding-right: 20px;
+  text-align: justify;
+}
+.subtitulo_2{ /* subtitulo del parrafo 2*/
+  grid-area: sub_2;
+  padding: 20px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+  text-align: left;
+  font-size: 20px;
+  color: silver;
+}
+.parrafo2_QS{ /* texto del parrafo 2*/
+  color: rgb(169, 207, 107);
+  grid-area: parrafo_2;
+  padding-left: 30px;
+  padding-top: 5px; 
+  padding-right: 20px;
+  text-align: justify;
+}
+.imagen_derecha{
+  grid-area: img;
+  padding-left: 90px;
+  padding-top: 10px;
+  align-items: center;
+}         
+section{
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(45deg,rgb(23, 45, 92),rgb(28, 28, 46),rgb(41, 56, 41),black);
+  background-size: 400% 400%;
+  position: relative;
+  animation: animacion 10s ease infinite; /* animacion del fondo */
+}
+
+/*------------ galería (html)---------------------------*/
+.col-sm-12 .col-md-6 .col-lg-4{
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+span{
+  font-family: Inter;
+  color: black;
+  font-size: 18px;
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);*/
+}
+.container-fluid{ /*contenedor padre*/
+  margin-top: 180px;
+  align-items: center;   
+  height: 660px;
+}
+img{
+  border-radius: 20px;
+}
+.col-sm-12 h1{
+  font-size: 40px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+}
+
+/*------------ compras (html)--------------*/
+.flex-container{
+  margin-top: 180px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.titulo_compras h1{
+  font-size: 40px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 20px;   
+}  
+.slogan_compras{
+  width: 50%;
+  margin-left: 80px; 
+  text-align: center;
+  font-size: 30px;
+}
+.slogan_compras p{
+  font-family: 'Dancing Script', regular;
+  font-size: 25px;
+  color: rgb(169, 207, 107);
+  margin-top: 10px;
+}
+.subtitulo_compras{
+  padding-left: 50px;
+  font-family: Cormorant Infant;
+  font-style: italic;
+  font-size: 18px;
+}
+.subtitulo_compras h3{
+  font-family: Cormorant Infant;
+  padding-left: 50px;
+}
+.mensajeCentral{
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 17px;
+  color: rgb(169, 207, 107);
+  margin-left: 80px;
+  text-align: justify;
+}
+.mensajeFinal{
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 17px;
+  color: rgb(169, 207, 107);
+  margin-left: 80px;
+  text-align: justify;
+}
+.back_gradient{
+  height: 155vh;
+}
+#carouselExampleIndicators{
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 100px;
+}
+
+/*------------ boton whatsapp -------------*/
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+text-decoration: none;
+color: #25d366;
+background-color:#fff;
+}
+.my-float{
+margin-top:16px;
+}
+
+/*------------ contacto (html)-------------*/
+.form{
+  text-align: center;
+  margin-top: 180px;
+}
+.form span h3{
+  font-family: Roboto;
+  font-style:normal;
+  font-size: 18px;
+}
+input, textarea{
+  outline: none;
+  border: 0;
+  width: 280px;
+}
+.field{
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+form{ /*interior del form*/
+  background-color: rgb(101, 104, 99);
+  color: black;
+  font-size: 1em;
+  padding: 15px;
+  margin: 0 auto;
+  width: 450px;
+  border-radius: 10px;
+}  
+input{
+  background-color:khaki; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 2px; 
+  border-color: black; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+textarea{
+  background-color: khaki; 
+  width: 405px; 
+  height: 80px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: black; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px;
+  resize: none;
+}
+.field:focus{
+  border-color: blue;
+  border-width: 1px; 
+}
+.center-content{
+  text-align: center;
+}
+.btn{
+  border-radius: 3px;
+  display: inline-block;
+  padding: 20px 15px;
+  text-decoration: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.btn-green{
+  color: white;
+  background-color: #3CC93F;
+}
+
+/*-------------- pie de pagina (todas) ---------------*/ 
+footer {
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #466066, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #466066, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 25px;
+}
+h2{
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.7);
+}
+.row{
+  padding: 5px;
+  text-align: center; 
+}
+span{
+  font-family: Inter;
+  color: black;
+  font-size: 15px;
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);*/
+}
+iframe{
+  border-radius: 20px;
+}
+.col-lg-4 h2 p{
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.7);
+  color: rgb(4, 6, 78);
+}
+
+/*-------- display movile ---------*/
+@media (max-width: 768px) {
+  /* --- header ---*/
+  .logo_tienda { /* Logo de la tienda */
+    height: 60px;
+    padding: 10px;  
+    width: 150px;
+    position: relative;
+    top: 10px;
+    left: 0;
+  }
+  .logo_tienda img{
+    width: 160;
+  }
+  nav ul li a{
+      color: black;
+      font-size: 0.9rem;
+  }
+  nav ul li{
+      display: block;
+  }
+  .caja_barraNav {
+      top: 30px;
+  }
+  /* --------- index.html ----------- */
+  h1{ /* Titulo */
+      color: aqua;
+      font-size: 35px;
+      margin: 0 auto;
+  }
+  span h3{
+      font-size: 20px;
+      margin: 0 auto;
+  }
+  .que_tenemos h5{
+     font-size: 0.9rem;
+     margin: 0 auto;
+  }
+  .slogan .nombre h3{
+      color: aqua;
+      font-size: 1.3rem;
+      margin: 0 auto;
+  }
+  .slogan span h3{
+    font-size: 1rem;
+    font-family: Inter;
+  }
+  main section div ul li a{ /* diseño boton */
+      margin: 6px;
+      padding: 6px;
+      width: 120px;
+      margin: 0 auto;
+  }
+  .form span h3{
+      font-size: 18px;
+      font-style: normal;
+  }
+/*------- quienes_somos (html)--------*/
+  section{
+    height: 250px;
+  }
+  
+  #container_qs{ /* contenedor padre QS */
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "titulo" 
+    "img"
+    "parrafo_0" 
+    "sub_1" 
+    "parrafo_1" 
+    "sub_2"
+    "parrafo_2"
+  }
+  .imagen_derecha{
+    padding: 50px;
+    padding-left: 30px;
+    padding-top: 10px;
+    align-items: center;
+  }  
+  /* ----------- galeria -----------*/
+  .container-fluid{ /*contenedor padre*/
+    background-color: dimgray;
+    margin-top: 180px;
+    align-items: center;   
+    height: auto;
+  }
+  /* ----------- compras ----------- */
+  section{
+    height: auto;
+  }
+  .titulo_compras h1{
+    font-size: 35px;
+  }  
+  .slogan_compras{
+    width: 100%;
+    margin-left: 0; 
+    text-align: center;
+    font-size: 10px;
+  }
+  .mensajeCentral p{
+    font-size: 15px;
+  }
+  .mensajeFinal{
+    font-size: 15px;
+  }
+  #carouselExampleIndicators{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+  /* ---- formulario de contacto ---- */
+  .contacto{
+    height: auto;
+  }
+  form{ /*interior del form*/
+    font-size: 0.6em;
+    padding: 20px;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 10px;
+  }
+  .form span h3{
+    font-size: 15px;
+  }  
+  input{ 
+    width: 300px; 
+    height: 40px; 
+  }
+  textarea{
+    background-color: khaki; 
+    width: 300px; 
+    height: 80px; 
+    resize: none;
+  }
+  
+  /*------------ boton whatsapp -------------*/
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:40px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+  
+  /* --------------- footer --------------- */
+  .container text-center{
+      display: none;
+  }
+  
+}
+  
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Tipografias importadas de fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@100;200;300;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CDN DE FONT AWESOME -->
+    <link rel="stylesheet" type="text/css" href="../librerias/fontawesome-free-6.2.0-web/css/all.css">
+    
+    <!-- cdn de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Formulario de Contacto</title>
+</head>
+
+<body>
+    <!-- cabecera -->
+    <header class="contenedor_header"><!-- caja contenedora de la cabecera --> 
+        <div class="logo_tienda">
+            <img src="../imagenes/Logo/Logo_Rolfi_Antigüedades-_300x132px_sinfondo.png" width="240" alt="imagen del Logo">
+        </div>
+        <div class="caja_barraNav">
+            <nav> <!-- barra de navegación -->
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li> 
+                    <li><a href="../quienes_somos/quienes_somos.html">Quienes Somos</a></li>
+                    <li><a href="../galeria/galeria.html">Galería</a></li>
+                    <li><a href="../compras/compras.html">Compras</a></li>
+                    <li><a href="../contacto/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacto">
+        <div class="form"> <!-- contenedor del formulario -->
+            <span>
+                <h1><br>Formulario de contacto</h1>
+                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3><br>
+            </span>
+            <form action="./enviar.php" method="post">
+                <p>Nombre:</p>
+                <input type="text" class="field"><br>
+                <p>Correo electrónico:</p>
+                <input type="email" class="field"><br>
+                <p>Asunto:</p>
+                <input type="text" class="field"><br>                
+                <p>Mensaje:</p>
+                <textarea class="field" name="message" id="message"></textarea><br>
+                <p class="center-content">
+                <input type="submit" class="btn btn-green" value="Enviar">
+                </p>    
+            </form>
+        </div>    
+    </section>
+    
+    <footer>    
+        <!-- Posicionamiento con Bootstrap grid -->
+        <div class="container text-center">
+
+            <div class="row">
+                <!-- columna 1 del footer-->
+                <div class="col-lg-4">
+                    <!--Mapa de ubicación <br>-->
+                    <h2> Ubicación </h2><br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27253.799493607046!2d-58.02985761062853!3d-31.36656882196342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95adc29d50eaac19%3A0x3871c23c97684453!2sSan%20Juan%202445%2C%20E3200BCE%20Concordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1664074374721!5m2!1ses-419!2sar" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p></p>
+                </div>
+          
+                <!-- columna 2 del footer-->
+                <div class="col-lg-4">
+                    <h2> Nuestros Productos</h2><br>           
+                    <p>Cristalería <br><br>
+                    Carteles de publicidad <br><br>
+                    Artículos de iluminación <br><br>
+                    Vitrinas y cristaleros <br><br>
+                    Platería criolla <br><br>
+                    Objetos de campo <br><br>
+                    Artículos de bares y pulperías </p>
+                    <p></p>
+                </div>
+          
+                <!-- columna 3 del footer-->
+                <div class="col-lg-4">
+                    <h2>Contactos</strong></h2><br>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        345 4044322
+                    </span> <br><br>
+                        <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        rolfimauro@hotmail.com
+                    </span> <br><br>
+                    <i class="fa-solid fa-location-dot"></i>  
+                    <span>
+                        San Juan 2445, Concordia (Entre Ríos)
+                    </span> <br>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
